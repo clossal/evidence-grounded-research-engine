@@ -27,6 +27,7 @@ and SHA-256 provenance without distributing source text.
 | Browser errors | PASS | No console errors during cited-answer, citation-detail and memory-detail checks. |
 | Backend tests | PASS | 41 passed. |
 | TypeScript and production build | PASS | `npx tsc --noEmit` and `npm run build` passed. |
+| Dependency audit | BLOCKED | Non-breaking lockfile updates reduced 12 findings (including one critical) to two inherited findings: one high and one moderate in Next.js's bundled PostCSS path. The only offered fix is the breaking Next 16.4.3 upgrade. |
 
 The local npm CLI emits a compatibility warning for npm 12.2.0 with Node 20.20.2,
 but the application type check and production build completed successfully. Pin a
@@ -77,4 +78,6 @@ paths. Its README/demo must disclose that local retrieval can miss relevant
 material and that reviewed memory is advisory rather than learned knowledge.
 Only use the four passing demonstration questions above after a final manual
 source-page check; do not use the two failed answerable cases in a walkthrough.
-
+For any public or hosted release, resolve the remaining high PostCSS advisory
+through a tested framework upgrade; do not use `npm audit fix --force` as a
+substitute for that validation.
