@@ -1,0 +1,43 @@
+# Local environments and frontend build outputs
+.venv/
+.venv-audit/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+frontend/.next/
+frontend/.next-dev/
+frontend/.next-dev.lock/
+frontend/.next-test*/
+frontend/next-env.d.ts
+frontend/node_modules/
+frontend/*.tsbuildinfo
+.npm-cache/
+text.txt
+
+# Runtime-only configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Never publish local models, private uploads, datasets, or derived artifacts
+models/
+data/demo_documents/
+data/heldout-evaluation-pdfs/
+data/public-research-demo/pdfs/
+data/public-research-demo/runtime/
+uploads/
+backend/research_memory.sqlite
+backend/research_memory.sqlite-*
+backend/.economist-index-staging/
+
+# Private measurements/reports can contain document-derived data
+reports/claim-*.json
+reports/heldout-*.json
+reports/retrieval-*.json
+reports/runtime-validation-*.md
+reports/
+
+# Release capture outputs are generated locally; add only reviewed synthetic screenshots.
+docs/screenshots/*.png
+!docs/screenshots/.gitkeep

@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "purpose": "Local, public-safe research demonstration corpus. PDFs are intentionally excluded from Git; obtain them only from the recorded publisher URLs.",
+  "documents": [
+    {
+      "id": "uk-ai-playbook-2025",
+      "filename": "uk-ai-playbook-2025.pdf",
+      "title": "Artificial Intelligence Playbook for the UK Government",
+      "publisher": "Government Digital Service / Department for Science, Innovation and Technology",
+      "source_url": "https://assets.publishing.service.gov.uk/media/67a4cdea8259d52732f6adeb/AI_Playbook_for_the_UK_Government__PDF_.pdf",
+      "landing_page": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government",
+      "licence": "Open Government Licence v3.0 except where otherwise stated",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "pages": 118,
+      "sha256": "3417156b104aa32ef795491739b7790eefe5e6f83f2f15a95e3872c4693cb5c0",
+      "redistribution": "Do not commit the source PDF. Attribute Crown copyright and check any material marked otherwise stated before separate reuse.",
+      "third_party_review": "Licence notice is on final page; manual visual review is required before reusing any individual figure or third-party branded image. Demo shows metadata and page citations, not source-page images."
+    },
+    {
+      "id": "advanced-ai-safety-interim-2024",
+      "filename": "advanced-ai-safety-interim-2024.pdf",
+      "title": "International Scientific Report on the Safety of Advanced AI: Interim Report",
+      "publisher": "UK AI Safety Institute / Cabinet Office / Department for Science, Innovation and Technology",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6716673b96def6d27a4c9b24/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf",
+      "landing_page": "https://www.gov.uk/government/publications/international-scientific-report-on-the-safety-of-advanced-ai",
+      "licence": "Open Government Licence v3.0 except where otherwise stated",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "pages": 132,
+      "sha256": "ccc4f9c9dfe608d40bec7eff2167a780f2c2610391db815099be48e36d603196",
+      "redistribution": "Do not commit the source PDF. Attribution is required; third-party material is excluded unless separately cleared.",
+      "third_party_review": "The PDF licence page expressly flags third-party copyright. No figure/image is redistributed by this demo; source page and publisher URL remain the verification path."
+    },
+    {
+      "id": "strategic-competition-ai-2024",
+      "filename": "strategic-competition-ai-2024.pdf",
+      "title": "Strategic competition in the age of AI: emerging risks and opportunities from military use of artificial intelligence",
+      "publisher": "UK Ministry of Defence / RAND Europe",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6703f5ec080bdf716392ef44/Strategic_competition_in_the_age_of_AI.pdf",
+      "landing_page": "https://www.gov.uk/government/publications/strategic-competition-in-the-age-of-ai-emerging-risks-and-opportunities-from-military-use-of-artificial-intelligence",
+      "licence": "Open Government Licence v3.0 except where otherwise stated (confirm in exact PDF before public redistribution)",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "pages": 144,
+      "sha256": "e2e01c4a1b55b0aadb3f391b498c9f27a5aa20e8d282e41f52fbb276a86e7a75",
+      "redistribution": "Local evaluation only until individual third-party rights are reviewed. Do not place the PDF in a repository.",
+      "third_party_review": "Commissioned RAND Europe material may contain credited third-party figures. The application exposes only metadata/page citations and the manifest records this restriction."
+    },
+    {
+      "id": "world-development-report-2024",
+      "filename": "world-development-report-2024-full.pdf",
+      "title": "World Development Report 2024: The Middle-Income Trap",
+      "publisher": "World Bank",
+      "source_url": "https://documents1.worldbank.org/curated/en/099080824150522081/pdf/P18074517e3a6a04b183b616a4c92958417.pdf",
+      "landing_page": "https://www.worldbank.org/en/publication/wdr2024",
+      "doi": "10.1596/978-1-4648-2078-6",
+      "licence": "CC BY 3.0 IGO",
+      "licence_url": "https://creativecommons.org/licenses/by/3.0/igo/",
+      "pages": 276,
+      "sha256": "2644f59680322115d11e2e640078c486ec840ff382aca521427010006fa2338b",
+      "redistribution": "PDF is not committed. Any redistribution/adaptation must retain the World Bank attribution and licence notice; do not imply World Bank endorsement.",
+      "third_party_review": "The report's rights page governs the work; separately credited figures, maps, and third-party material require individual review before reuse. The demo does not redistribute page images."
+    },
+    {
+      "id": "phe-annual-report-2019-2020",
+      "filename": "phe-annual-report-2019-2020.pdf",
+      "title": "Public Health England Annual Report and Accounts 2019/20",
+      "publisher": "Public Health England",
+      "source_url": "https://assets.publishing.service.gov.uk/media/60367772d3bf7f0aaa2a45f1/Annual_Report___Accounts_2019_20_PRINT.pdf",
+      "landing_page": "https://www.gov.uk/government/publications/public-health-england-annual-report-and-accounts-2019-to-2020",
+      "licence": "Open Government Licence v3.0 except where otherwise stated",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "pages": 180,
+      "sha256": "92e137bba487e1bbc6f80e16584bf4f9252af33c2c4cc5ee6c9636a1b81382b2",
+      "redistribution": "Do not commit the source PDF. Attribute Crown copyright; separately licensed material is excluded.",
+      "third_party_review": "The rights page identifies a Guzelian photo on pages 8 and 86. It is not used in screenshots or exports; the original PDF is retained only locally."
+    }
+  ],
+  "rejected_downloads": [
+    {
+      "filename": "world-development-report-2024.pdf",
+      "reason": "Publisher-hosted overview was only 30 pages, below the full-length corpus threshold. It is never indexed."
+    }
+  ]
+}
