@@ -11,6 +11,7 @@ frontend/.next-test*/
 frontend/next-env.d.ts
 frontend/node_modules/
 frontend/*.tsbuildinfo
+frontend/AGENTS.md
 .npm-cache/
 text.txt
 
