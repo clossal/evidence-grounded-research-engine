@@ -70,6 +70,9 @@ answers, a cross-document comparison, advisory reviewed memory, and a safe
 insufficient-evidence response. It does not show private research data or PDF
 pages.
 
+- [Watch the 54-second highlight](artifacts/research-engine-demo-short.mp4)
+- [Highlight edit decisions and validation](artifacts/research-engine-demo-short-edits.json)
+- [Highlight verification notes](artifacts/research-engine-demo-short-verification.md)
 - [Watch the MP4 walkthrough](artifacts/research-engine-demo.mp4)
 - [Transcript and timeline](artifacts/research-engine-demo-transcript.md)
 - [Verification notes](artifacts/research-engine-demo-verification.md)

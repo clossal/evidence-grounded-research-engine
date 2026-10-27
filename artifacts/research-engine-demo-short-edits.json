@@ -1,0 +1,226 @@
+{
+  "schema": "research-engine-demo-edit-log/v1",
+  "source_video": "artifacts/research-engine-demo.mp4",
+  "event_timeline": "artifacts/research-engine-demo-events.jsonl",
+  "source_duration_seconds": 185.56,
+  "event_span_seconds": 185.637,
+  "alignment_delta_seconds": -0.077,
+  "output_video": "artifacts/research-engine-demo-short.mp4",
+  "output_duration_seconds": 54.44,
+  "max_duration_seconds": 60.0,
+  "segments": [
+    {
+      "name": "workspace-introduction",
+      "start": 2.259,
+      "end": 6.259,
+      "reason": "Show isolated public research workspace.",
+      "question_id": null,
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 4.0
+    },
+    {
+      "name": "single-document-question-and-answer",
+      "start": 16.623,
+      "end": 26.065,
+      "reason": "Preserve typed question and grounded answer.",
+      "question_id": "playbook-principles",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 9.442
+    },
+    {
+      "name": "citation-inspection",
+      "start": 38.063,
+      "end": 43.263,
+      "reason": "Show citation metadata and publisher page link.",
+      "question_id": "playbook-principles",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 5.2
+    },
+    {
+      "name": "cross-document-submission",
+      "start": 85.906,
+      "end": 87.706,
+      "reason": "Show two-document question submission.",
+      "question_id": "cross-document",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 1.8
+    },
+    {
+      "name": "cross-document-processing-cue",
+      "start": 87.706,
+      "end": 88.706,
+      "reason": "Retain a real processing cue; omit remaining inference wait.",
+      "question_id": "cross-document",
+      "speed": 1.0,
+      "caption": "Inference wait shortened",
+      "output_duration": 1.0
+    },
+    {
+      "name": "cross-document-answer",
+      "start": 91.696,
+      "end": 103.346,
+      "reason": "Show multi-source answer and fresh citations.",
+      "question_id": "cross-document",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 11.65
+    },
+    {
+      "name": "reviewed-memory",
+      "start": 134.357,
+      "end": 144.457,
+      "reason": "Show observation detail and provenance state.",
+      "question_id": null,
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 10.1
+    },
+    {
+      "name": "responsible-abstention",
+      "start": 153.375,
+      "end": 164.518,
+      "reason": "Show unsupported question and explicit abstention.",
+      "question_id": "out-of-corpus-abstention",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 11.143
+    }
+  ],
+  "frame_checks": [
+    {
+      "segment": "workspace-introduction",
+      "point": "start",
+      "output_time": 0.15,
+      "frame": "artifacts/edit-checks/short-00-workspace-introduction-start.png"
+    },
+    {
+      "segment": "workspace-introduction",
+      "point": "end",
+      "output_time": 3.85,
+      "frame": "artifacts/edit-checks/short-00-workspace-introduction-end.png"
+    },
+    {
+      "segment": "single-document-question-and-answer",
+      "point": "start",
+      "output_time": 4.15,
+      "frame": "artifacts/edit-checks/short-01-single-document-question-and-answer-start.png"
+    },
+    {
+      "segment": "single-document-question-and-answer",
+      "point": "end",
+      "output_time": 13.292,
+      "frame": "artifacts/edit-checks/short-01-single-document-question-and-answer-end.png"
+    },
+    {
+      "segment": "citation-inspection",
+      "point": "start",
+      "output_time": 13.592,
+      "frame": "artifacts/edit-checks/short-02-citation-inspection-start.png"
+    },
+    {
+      "segment": "citation-inspection",
+      "point": "end",
+      "output_time": 18.492,
+      "frame": "artifacts/edit-checks/short-02-citation-inspection-end.png"
+    },
+    {
+      "segment": "cross-document-submission",
+      "point": "start",
+      "output_time": 18.792,
+      "frame": "artifacts/edit-checks/short-03-cross-document-submission-start.png"
+    },
+    {
+      "segment": "cross-document-submission",
+      "point": "end",
+      "output_time": 20.292,
+      "frame": "artifacts/edit-checks/short-03-cross-document-submission-end.png"
+    },
+    {
+      "segment": "cross-document-processing-cue",
+      "point": "start",
+      "output_time": 20.592,
+      "frame": "artifacts/edit-checks/short-04-cross-document-processing-cue-start.png"
+    },
+    {
+      "segment": "cross-document-processing-cue",
+      "point": "end",
+      "output_time": 21.292,
+      "frame": "artifacts/edit-checks/short-04-cross-document-processing-cue-end.png"
+    },
+    {
+      "segment": "cross-document-answer",
+      "point": "start",
+      "output_time": 21.592,
+      "frame": "artifacts/edit-checks/short-05-cross-document-answer-start.png"
+    },
+    {
+      "segment": "cross-document-answer",
+      "point": "end",
+      "output_time": 32.942,
+      "frame": "artifacts/edit-checks/short-05-cross-document-answer-end.png"
+    },
+    {
+      "segment": "reviewed-memory",
+      "point": "start",
+      "output_time": 33.242,
+      "frame": "artifacts/edit-checks/short-06-reviewed-memory-start.png"
+    },
+    {
+      "segment": "reviewed-memory",
+      "point": "end",
+      "output_time": 43.042,
+      "frame": "artifacts/edit-checks/short-06-reviewed-memory-end.png"
+    },
+    {
+      "segment": "responsible-abstention",
+      "point": "start",
+      "output_time": 43.342,
+      "frame": "artifacts/edit-checks/short-07-responsible-abstention-start.png"
+    },
+    {
+      "segment": "responsible-abstention",
+      "point": "end",
+      "output_time": 54.185,
+      "frame": "artifacts/edit-checks/short-07-responsible-abstention-end.png"
+    }
+  ],
+  "black_detect_events": [],
+  "static_ui_review_events": [
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 0",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.84",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 2.84",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 5.32",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.52",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 7.84",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 7.88",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.12",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 10",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 10",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.96",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 12.96",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 13.64",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.72",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 16.36",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 16.4",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.28",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 18.68",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 21.96",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 3.32",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 25.28",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 28.68",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 3.48",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 32.16",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 34.08",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 2.84",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 36.92",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_start: 37.28",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_duration: 3.2",
+    "[Parsed_freezedetect_0 @ 0x7fd200003380] lavfi.freezedetect.freeze_end: 40.48"
+  ],
+  "static_ui_review_note": "Static runs are expected only during readable answer, citation, or memory holds; processing waits are limited to the labeled one-second cue.",
+  "authenticity": "Every content segment is directly extracted from the source recording; only the wait-compression caption is overlaid."
+}
