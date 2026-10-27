@@ -62,6 +62,19 @@ as research assistance, inspect the cited source page, and do not treat memory
 as verified truth. The application is a single-user local demo, not a
 multi-tenant service.
 
+## Recorded local demonstration
+
+The recorded walkthrough uses the real local backend, local Qwen inference,
+and a separately indexed public-demo corpus. It shows cited single-document
+answers, a cross-document comparison, advisory reviewed memory, and a safe
+insufficient-evidence response. It does not show private research data or PDF
+pages.
+
+- [Watch the MP4 walkthrough](artifacts/research-engine-demo.mp4)
+- [Transcript and timeline](artifacts/research-engine-demo-transcript.md)
+- [Verification notes](artifacts/research-engine-demo-verification.md)
+- [Representative still](artifacts/research-engine-demo-thumbnail.png)
+
 ## Release checks
 
 Run `scripts/audit-public-release.sh` from a fresh exported repository after

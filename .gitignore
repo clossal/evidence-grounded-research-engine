@@ -42,3 +42,9 @@ reports/
 # Release capture outputs are generated locally; add only reviewed synthetic screenshots.
 docs/screenshots/*.png
 !docs/screenshots/.gitkeep
+
+# Preserve raw captures locally for review, but publish only the reviewed MP4
+# and explicitly selected public-safe artifacts.
+artifacts/raw-video/
+artifacts/*.failed-*.jsonl
+artifacts/*.log

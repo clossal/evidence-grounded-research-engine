@@ -1,0 +1,50 @@
+{"timestamp":"2026-10-27T05:48:50.017Z","event":"recording_started","baseUrl":"http://127.0.0.1:3006"}
+{"timestamp":"2026-10-27T05:48:52.276Z","event":"library_rendered"}
+{"timestamp":"2026-10-27T05:48:52.350Z","event":"reading_hold_start","milliseconds":15000,"reason":"opening-library"}
+{"timestamp":"2026-10-27T05:49:07.349Z","event":"reading_hold_end","reason":"opening-library"}
+{"timestamp":"2026-10-27T05:49:07.422Z","event":"document_selection","count":1}
+{"timestamp":"2026-10-27T05:49:07.440Z","event":"question_entered","id":"playbook-principles","question":"How many common principles does the UK AI Playbook define for government organisations?","useMemory":false}
+{"timestamp":"2026-10-27T05:49:07.487Z","event":"question_submitted","id":"playbook-principles"}
+{"timestamp":"2026-10-27T05:49:08.065Z","event":"backend_response","id":"playbook-principles","http_status":200,"run_id":"run_a6446591fb554adb84f3a4b0b2df0b1a","result_status":"answered","evidence_count":1,"memory_used":0}
+{"timestamp":"2026-10-27T05:49:08.082Z","event":"frontend_answer_rendered","id":"playbook-principles","result_status":"answered"}
+{"timestamp":"2026-10-27T05:49:08.157Z","event":"reading_hold_start","milliseconds":20000,"reason":"playbook-principles-answer"}
+{"timestamp":"2026-10-27T05:49:28.157Z","event":"reading_hold_end","reason":"playbook-principles-answer"}
+{"timestamp":"2026-10-27T05:49:28.280Z","event":"citation_opened","question":"playbook-principles","href":"https://assets.publishing.service.gov.uk/media/67a4cdea8259d52732f6adeb/AI_Playbook_for_the_UK_Government__PDF_.pdf#page=9"}
+{"timestamp":"2026-10-27T05:49:28.357Z","event":"reading_hold_start","milliseconds":12000,"reason":"playbook-citation"}
+{"timestamp":"2026-10-27T05:49:40.358Z","event":"reading_hold_end","reason":"playbook-citation"}
+{"timestamp":"2026-10-27T05:49:40.844Z","event":"reading_hold_start","milliseconds":1200,"reason":"return-to-question"}
+{"timestamp":"2026-10-27T05:49:42.044Z","event":"reading_hold_end","reason":"return-to-question"}
+{"timestamp":"2026-10-27T05:49:42.120Z","event":"document_selection","count":1}
+{"timestamp":"2026-10-27T05:49:42.134Z","event":"question_entered","id":"safety-limitations","question":"What limitation does the interim AI safety report identify about current technical mitigation methods?","useMemory":false}
+{"timestamp":"2026-10-27T05:49:42.176Z","event":"question_submitted","id":"safety-limitations"}
+{"timestamp":"2026-10-27T05:49:43.636Z","event":"backend_response","id":"safety-limitations","http_status":200,"run_id":"run_83be3239c6034b4dbe9d402a2a6df8bf","result_status":"answered","evidence_count":1,"memory_used":0}
+{"timestamp":"2026-10-27T05:49:43.644Z","event":"frontend_answer_rendered","id":"safety-limitations","result_status":"answered"}
+{"timestamp":"2026-10-27T05:49:43.715Z","event":"reading_hold_start","milliseconds":20000,"reason":"safety-limitations-answer"}
+{"timestamp":"2026-10-27T05:50:03.715Z","event":"reading_hold_end","reason":"safety-limitations-answer"}
+{"timestamp":"2026-10-27T05:50:06.125Z","event":"scroll_complete","pixels":540,"steps":6}
+{"timestamp":"2026-10-27T05:50:06.125Z","event":"reading_hold_start","milliseconds":10000,"reason":"safety-reading"}
+{"timestamp":"2026-10-27T05:50:16.126Z","event":"reading_hold_end","reason":"safety-reading"}
+{"timestamp":"2026-10-27T05:50:16.583Z","event":"document_selection","count":2}
+{"timestamp":"2026-10-27T05:50:16.623Z","event":"question_entered","id":"cross-document","question":"Compare the AI safety report and UK AI Playbook on risk mitigation and accountability.","useMemory":true}
+{"timestamp":"2026-10-27T05:50:16.669Z","event":"question_submitted","id":"cross-document"}
+{"timestamp":"2026-10-27T05:50:21.855Z","event":"backend_response","id":"cross-document","http_status":200,"run_id":"run_f1fbbec2582f4c83b0e3b448b8321ef3","result_status":"answered","evidence_count":5,"memory_used":2}
+{"timestamp":"2026-10-27T05:50:21.863Z","event":"frontend_answer_rendered","id":"cross-document","result_status":"answered"}
+{"timestamp":"2026-10-27T05:50:21.935Z","event":"reading_hold_start","milliseconds":20000,"reason":"cross-document-answer"}
+{"timestamp":"2026-10-27T05:50:41.934Z","event":"reading_hold_end","reason":"cross-document-answer"}
+{"timestamp":"2026-10-27T05:50:44.348Z","event":"scroll_complete","pixels":420,"steps":6}
+{"timestamp":"2026-10-27T05:50:44.417Z","event":"reading_hold_start","milliseconds":18000,"reason":"cross-document-reading"}
+{"timestamp":"2026-10-27T05:51:02.418Z","event":"reading_hold_end","reason":"cross-document-reading"}
+{"timestamp":"2026-10-27T05:51:04.866Z","event":"scroll_complete","pixels":320,"steps":6}
+{"timestamp":"2026-10-27T05:51:04.974Z","event":"memory_detail_opened"}
+{"timestamp":"2026-10-27T05:51:05.068Z","event":"reading_hold_start","milliseconds":18000,"reason":"memory-review"}
+{"timestamp":"2026-10-27T05:51:23.068Z","event":"reading_hold_end","reason":"memory-review"}
+{"timestamp":"2026-10-27T05:51:23.849Z","event":"document_selection","count":1}
+{"timestamp":"2026-10-27T05:51:23.892Z","event":"question_entered","id":"out-of-corpus-abstention","question":"What was the exact 2026 inflation rate forecast in the selected 2019/20 PHE annual report?","useMemory":false}
+{"timestamp":"2026-10-27T05:51:23.932Z","event":"question_submitted","id":"out-of-corpus-abstention"}
+{"timestamp":"2026-10-27T05:51:25.526Z","event":"backend_response","id":"out-of-corpus-abstention","http_status":200,"run_id":"run_af82fe712c8e4c308174ec6ab3c0ab9a","result_status":"insufficient_evidence","evidence_count":0,"memory_used":0}
+{"timestamp":"2026-10-27T05:51:25.535Z","event":"frontend_answer_rendered","id":"out-of-corpus-abstention","result_status":"insufficient_evidence"}
+{"timestamp":"2026-10-27T05:51:25.598Z","event":"reading_hold_start","milliseconds":18000,"reason":"out-of-corpus-abstention-answer"}
+{"timestamp":"2026-10-27T05:51:43.598Z","event":"reading_hold_end","reason":"out-of-corpus-abstention-answer"}
+{"timestamp":"2026-10-27T05:51:43.653Z","event":"reading_hold_start","milliseconds":12000,"reason":"abstention-reading"}
+{"timestamp":"2026-10-27T05:51:55.654Z","event":"reading_hold_end","reason":"abstention-reading"}
+{"timestamp":"2026-10-27T05:51:55.654Z","event":"recording_complete","console_errors":["Failed to load resource: the server responded with a status of 404 (Not Found)"]}
