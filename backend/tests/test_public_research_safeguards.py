@@ -21,6 +21,9 @@ def test_answer_validation_rejects_marker_only_and_embedded_abstention():
     assert not PublicResearchDemo._valid_answer(
         "- INSUFFICIENT_EVIDENCE [P1]", allowed
     )
+    assert not PublicResearchDemo._valid_answer(
+        "- Insufficient evidence for a detailed answer. [P1]", allowed
+    )
     assert PublicResearchDemo._valid_answer(
         "- The report identifies ten common principles. [P1]", allowed
     )

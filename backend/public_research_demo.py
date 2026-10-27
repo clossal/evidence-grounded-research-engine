@@ -275,6 +275,11 @@ class PublicResearchDemo:
         lines = [line.strip() for line in answer.splitlines() if line.strip()]
         if not lines or "INSUFFICIENT_EVIDENCE" in answer.upper():
             return False
+        # A model occasionally turns the instructed abstention into a natural-
+        # language bullet and then appends every available marker. That is not
+        # an evidence-grounded answer, even though its marker syntax is valid.
+        if any(re.match(r"^[-•\s]*(?:there (?:is|was) )?insufficient evidence\b", line, re.I) for line in lines):
+            return False
         cited = set(re.findall(r"P\d+", answer))
         if not (cited and cited <= allowed):
             return False

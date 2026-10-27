@@ -66,6 +66,6 @@ multi-tenant service.
 
 Run `scripts/audit-public-release.sh` from a fresh exported repository after
 initialising its new Git history. See `docs/public-research-qa-2026-10-26.md`
-for the source-grounded QA sample and `docs/public-research-screenshot-checklist.md`
+and `docs/public-research-release-hardening-2026-10-26.md` for source-grounded
+QA and release decisions, and `docs/public-research-screenshot-checklist.md`
 for safe portfolio screenshots.
-
