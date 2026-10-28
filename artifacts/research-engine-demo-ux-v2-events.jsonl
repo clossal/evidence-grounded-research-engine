@@ -1,0 +1,24 @@
+{"timestamp":"2026-10-28T05:52:31.918Z","event":"recording_started","baseUrl":"http://127.0.0.1:3007","workflow":"visible-workspace-v3"}
+{"timestamp":"2026-10-28T05:52:32.750Z","event":"library_rendered","view":"workspace"}
+{"timestamp":"2026-10-28T05:52:37.610Z","event":"document_selection","count":1}
+{"timestamp":"2026-10-28T05:52:40.391Z","event":"question_entered","id":"playbook-principles","question":"How many common principles does the UK AI Playbook define for government organisations?","typing":"sequential"}
+{"timestamp":"2026-10-28T05:52:40.441Z","event":"question_submitted","id":"playbook-principles"}
+{"timestamp":"2026-10-28T05:52:56.366Z","event":"backend_response","id":"playbook-principles","http_status":200,"run_id":"run_5fb2ffe9aaf04bf7a06cded1f53f98be","result_status":"answered","evidence_count":1}
+{"timestamp":"2026-10-28T05:52:56.409Z","event":"frontend_answer_rendered","id":"playbook-principles","result_status":"answered"}
+{"timestamp":"2026-10-28T05:53:00.074Z","event":"scroll_complete","label":"first-answer-to-evidence","pixels":540}
+{"timestamp":"2026-10-28T05:53:01.325Z","event":"citation_opened","question":"playbook-principles","href":"https://assets.publishing.service.gov.uk/media/67a4cdea8259d52732f6adeb/AI_Playbook_for_the_UK_Government__PDF_.pdf#page=9"}
+{"timestamp":"2026-10-28T05:53:05.575Z","event":"document_selection","count":2}
+{"timestamp":"2026-10-28T05:53:08.200Z","event":"question_entered","id":"cross-document","question":"Compare the AI safety report and UK AI Playbook on risk mitigation and accountability.","typing":"sequential"}
+{"timestamp":"2026-10-28T05:53:08.223Z","event":"question_submitted","id":"cross-document"}
+{"timestamp":"2026-10-28T05:53:12.037Z","event":"backend_response","id":"cross-document","http_status":200,"run_id":"run_d78cb0c9c7f04e3880ad7267c021f908","result_status":"answered","evidence_count":2}
+{"timestamp":"2026-10-28T05:53:12.054Z","event":"frontend_answer_rendered","id":"cross-document","result_status":"answered"}
+{"timestamp":"2026-10-28T05:53:15.732Z","event":"scroll_complete","label":"cross-document-answer","pixels":500}
+{"timestamp":"2026-10-28T05:53:19.776Z","event":"scroll_complete","label":"memory-ledger","pixels":720}
+{"timestamp":"2026-10-28T05:53:20.636Z","event":"scroll_complete","label":"observation-detail","pixels":360}
+{"timestamp":"2026-10-28T05:53:20.640Z","event":"memory_detail_opened"}
+{"timestamp":"2026-10-28T05:53:24.666Z","event":"document_selection","count":1}
+{"timestamp":"2026-10-28T05:53:27.441Z","event":"question_entered","id":"out-of-corpus-abstention","question":"What was the exact 2026 inflation rate forecast in the selected 2019/20 PHE annual report?","typing":"sequential"}
+{"timestamp":"2026-10-28T05:53:27.489Z","event":"question_submitted","id":"out-of-corpus-abstention"}
+{"timestamp":"2026-10-28T05:53:29.125Z","event":"backend_response","id":"out-of-corpus-abstention","http_status":200,"run_id":"run_99280f0c58d24e7894cd0545509f28f2","result_status":"insufficient_evidence","evidence_count":0}
+{"timestamp":"2026-10-28T05:53:29.136Z","event":"frontend_answer_rendered","id":"out-of-corpus-abstention","result_status":"insufficient_evidence"}
+{"timestamp":"2026-10-28T05:53:33.526Z","event":"recording_complete","console_errors":["Failed to load resource: the server responded with a status of 404 (Not Found)"]}

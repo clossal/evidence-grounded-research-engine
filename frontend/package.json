@@ -4,7 +4,7 @@
   "packageManager": "npm@10.9.2",
   "main": "index.js",
   "scripts": {
-    "dev": "bash ./scripts/dev-server.sh",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -25,6 +25,7 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.51.1",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "20.17.30",
     "@types/react": "18.3.12",

@@ -5,21 +5,24 @@ It answers questions from selected documents, shows page-level supporting
 evidence, records reviewable observations, and abstains when the available
 evidence is insufficient.
 
-![Completed cited answer in the local research workspace](docs/images/cited-answer.png)
+![Light-themed Research Workspace with a question field visible above the fold](artifacts/screenshots/ux-video-v2/workspace-opening.png)
 
 ## Watch the demonstration
 
-[Watch the 54-second local walkthrough](artifacts/research-engine-demo-short.mp4).
-It shows a real local Qwen response, evidence inspection, cross-document
-research, advisory reviewed memory, and an explicit abstention. See the
-[verification notes](artifacts/research-engine-demo-short-verification.md) and
-[edit log](artifacts/research-engine-demo-short-edits.json) for the recorded
-request and citation checks.
+[Watch the 45-second local walkthrough](artifacts/research-engine-demo-ux-v3-short.mp4).
+It visibly shows question entry, real local Qwen inference, continuous reading
+through the answer, citation inspection, cross-document research, reviewed
+memory, and an explicit abstention. The earlier walkthrough is retained as an
+archived artifact. See the [event timeline](artifacts/research-engine-demo-ux-v2-events.jsonl)
+and [edit log](artifacts/research-engine-demo-ux-v3-short-edits.json) for recorded
+request and rendering checks.
 
 ## Key capabilities
 
 - Ingest permitted text-based PDFs into a local document collection.
-- Select one or more documents for evidence-grounded Q&A.
+- Keep the document collection separate from the Research Workspace, so the
+  question input is immediately available on opening the application.
+- Select one or more documents in the Document Library for evidence-grounded Q&A.
 - Return source title, page, section, and publisher link with each evidence
   item; reject answers whose citation markers do not match retrieved evidence.
 - Detect unsupported or live-information requests and return an

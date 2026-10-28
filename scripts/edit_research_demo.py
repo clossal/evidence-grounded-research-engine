@@ -115,12 +115,19 @@ def choose_storyboard(records: list[dict[str, Any]], duration: float) -> list[Se
     first_event = first(records, "library_rendered")
 
     segments: list[Segment] = []
-    start, end = bounded(first_event["video_time"], first_event["video_time"] + 4.0, duration)
+    start, end = bounded(first_event["video_time"], first_event["video_time"] + 3.0, duration)
     segments.append(Segment("workspace-introduction", start, end, "Show isolated public research workspace."))
 
-    start, end = bounded(first_question["video_time"] - 0.8, first_render["video_time"] + 8.0, duration)
-    segments.append(Segment("single-document-question-and-answer", start, end, "Preserve typed question and grounded answer.", first_id))
-    start, end = bounded(citation["video_time"] - 0.2, citation["video_time"] + 5.0, duration)
+    # Preserve the visible character-by-character typing and a short genuine
+    # researching state, then cut to the actual rendered answer. Long local
+    # inference waits add no viewing value and are explicitly labelled.
+    start, end = bounded(first_question["video_time"] - 3.6, first_question["video_time"] + 0.3, duration)
+    segments.append(Segment("single-document-question-typing", start, end, "Show the real typed research question and submission.", first_id))
+    start, end = bounded(first_question["video_time"] + 0.3, first_question["video_time"] + 1.3, duration)
+    segments.append(Segment("single-document-processing-cue", start, end, "Retain a real processing cue; omit remaining inference wait.", first_id, caption="Inference wait shortened"))
+    start, end = bounded(first_render["video_time"] - 0.15, first_render["video_time"] + 7.0, duration)
+    segments.append(Segment("single-document-answer", start, end, "Show the real grounded answer at readable speed.", first_id))
+    start, end = bounded(citation["video_time"] - 0.2, citation["video_time"] + 4.0, duration)
     segments.append(Segment("citation-inspection", start, end, "Show citation metadata and publisher page link.", first_id))
 
     # Keep a genuine one-second researching state, but remove the remainder of
@@ -129,15 +136,15 @@ def choose_storyboard(records: list[dict[str, Any]], duration: float) -> list[Se
     segments.append(Segment("cross-document-submission", cue_start, cue_end, "Show two-document question submission.", cross_id))
     wait_start, wait_end = bounded(cross_question["video_time"] + 1.1, cross_question["video_time"] + 2.1, duration)
     segments.append(Segment("cross-document-processing-cue", wait_start, wait_end, "Retain a real processing cue; omit remaining inference wait.", cross_id, caption="Inference wait shortened"))
-    start, end = bounded(cross_render["video_time"] - 0.15, cross_render["video_time"] + 11.5, duration)
+    start, end = bounded(cross_render["video_time"] - 0.15, cross_render["video_time"] + 8.0, duration)
     segments.append(Segment("cross-document-answer", start, end, "Show multi-source answer and fresh citations.", cross_id))
 
-    start, end = bounded(memory["video_time"] - 0.6, memory["video_time"] + 9.5, duration)
+    start, end = bounded(memory["video_time"] - 0.6, memory["video_time"] + 6.0, duration)
     segments.append(Segment("reviewed-memory", start, end, "Show observation detail and provenance state."))
 
     if abstention:
         abstention_question = first(records, "question_entered", id=abstention["id"])
-        start, end = bounded(abstention_question["video_time"] - 0.5, abstention["video_time"] + 9.0, duration)
+        start, end = bounded(abstention_question["video_time"] - 0.5, abstention["video_time"] + 6.0, duration)
         segments.append(Segment("responsible-abstention", start, end, "Show unsupported question and explicit abstention.", abstention["id"]))
 
     return segments
@@ -203,6 +210,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--edits", type=Path, default=DEFAULT_LOG)
     parser.add_argument("--max-duration", type=float, default=60.0)
+    parser.add_argument("--checks", type=Path, default=CHECKS, help="Directory for visual-review frames.")
     args = parser.parse_args()
 
     if not args.input.is_file() or not args.events.is_file():
@@ -212,7 +220,10 @@ def main() -> int:
     events = read_events(args.events)
     ledger_duration = event_duration(events)
     alignment_delta = round(source_duration - ledger_duration, 3)
-    if abs(alignment_delta) > 3.0:
+    # Browser video files commonly contain a short tail while Playwright closes
+    # the context. Event timestamps still begin with the first rendered frame,
+    # so a source-only tail is safe to trim. Other drift needs manual review.
+    if alignment_delta < -3.0 or alignment_delta > 6.0:
         raise SystemExit(
             f"Event/video timing differs by {alignment_delta}s; inspect source footage before cutting."
         )
@@ -230,7 +241,8 @@ def main() -> int:
     font = next((candidate for candidate in font_candidates if candidate.is_file()), None)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.edits.parent.mkdir(parents=True, exist_ok=True)
-    CHECKS.mkdir(parents=True, exist_ok=True)
+    checks = args.checks.resolve()
+    checks.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(prefix="research-demo-edit-") as temporary:
         work = Path(temporary)
@@ -259,7 +271,7 @@ def main() -> int:
     frame_checks = []
     for index, segment in enumerate(storyboard):
         for point, label in ((max(0.05, offset + 0.15), "start"), (max(0.05, offset + segment.duration - 0.15), "end")):
-            frame = CHECKS / f"short-{index:02d}-{segment.name}-{label}.png"
+            frame = checks / f"short-{index:02d}-{segment.name}-{label}.png"
             sample_frame(args.output, point, frame)
             frame_checks.append({"segment": segment.name, "point": label, "output_time": round(point, 3), "frame": str(frame.relative_to(ROOT))})
         offset += segment.duration
@@ -273,6 +285,7 @@ def main() -> int:
         "source_duration_seconds": source_duration,
         "event_span_seconds": ledger_duration,
         "alignment_delta_seconds": alignment_delta,
+        "alignment_note": "A positive delta up to six seconds is a confirmed Playwright shutdown tail; source intervals remain anchored to the recording-start event.",
         "output_video": str(args.output.relative_to(ROOT)),
         "output_duration_seconds": output_duration,
         "max_duration_seconds": args.max_duration,

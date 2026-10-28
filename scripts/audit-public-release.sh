@@ -32,12 +32,14 @@ if [[ -n $pdfs ]] && printf '%s\n' "$pdfs" | grep -qv '^./backend/tests/fixtures
 fi
 
 if rg -n -i --hidden --glob '!.git/**' --glob '!scripts/audit-public-release.sh' \
+  --glob '!frontend/.next*/**' --glob '!frontend/node_modules/**' --glob '!**/__pycache__/**' \
   '(the economist|economist-rag|/run/media/|/mnt/data/)' .; then
   echo "FAIL: private corpus or path reference found" >&2
   fail=1
 fi
 
 if rg -n -i --hidden --glob '!.git/**' --glob '!scripts/audit-public-release.sh' \
+  --glob '!frontend/.next*/**' --glob '!frontend/node_modules/**' --glob '!**/__pycache__/**' \
   '(sk-[A-Za-z0-9_-]{16,}|hf_[A-Za-z0-9]{16,}|authorization:[[:space:]]*bearer)' .; then
   echo "FAIL: credential-shaped value found" >&2
   fail=1

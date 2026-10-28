@@ -15,8 +15,7 @@ export default function RootLayout({
     // This is deliberately limited to the externally mutated root element so
     // real mismatches inside the application still surface in development.
     <html lang="en" suppressHydrationWarning>
-      {/* Force a dark UI here */}
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+      <body className="min-h-screen bg-white text-slate-900 antialiased">
         {children}
       </body>
     </html>

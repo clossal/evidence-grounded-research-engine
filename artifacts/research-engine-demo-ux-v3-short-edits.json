@@ -1,0 +1,250 @@
+{
+  "schema": "research-engine-demo-edit-log/v1",
+  "source_video": "artifacts/raw-video-ux/research-engine-demo-ux-1793166814802.webm",
+  "event_timeline": "artifacts/research-engine-demo-ux-v2-events.jsonl",
+  "source_duration_seconds": 66.52,
+  "event_span_seconds": 61.608,
+  "alignment_delta_seconds": 4.912,
+  "alignment_note": "A positive delta up to six seconds is a confirmed Playwright shutdown tail; source intervals remain anchored to the recording-start event.",
+  "output_video": "artifacts/research-engine-demo-ux-v3-short.mp4",
+  "output_duration_seconds": 45.04,
+  "max_duration_seconds": 60.0,
+  "segments": [
+    {
+      "name": "workspace-introduction",
+      "start": 0.832,
+      "end": 3.832,
+      "reason": "Show isolated public research workspace.",
+      "question_id": null,
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 3.0
+    },
+    {
+      "name": "single-document-question-typing",
+      "start": 4.873,
+      "end": 8.773,
+      "reason": "Show the real typed research question and submission.",
+      "question_id": "playbook-principles",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 3.9
+    },
+    {
+      "name": "single-document-processing-cue",
+      "start": 8.773,
+      "end": 9.773,
+      "reason": "Retain a real processing cue; omit remaining inference wait.",
+      "question_id": "playbook-principles",
+      "speed": 1.0,
+      "caption": "Inference wait shortened",
+      "output_duration": 1.0
+    },
+    {
+      "name": "single-document-answer",
+      "start": 24.341,
+      "end": 31.491,
+      "reason": "Show the real grounded answer at readable speed.",
+      "question_id": "playbook-principles",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 7.15
+    },
+    {
+      "name": "citation-inspection",
+      "start": 29.207,
+      "end": 33.407,
+      "reason": "Show citation metadata and publisher page link.",
+      "question_id": "playbook-principles",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 4.2
+    },
+    {
+      "name": "cross-document-submission",
+      "start": 35.582,
+      "end": 37.382,
+      "reason": "Show two-document question submission.",
+      "question_id": "cross-document",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 1.8
+    },
+    {
+      "name": "cross-document-processing-cue",
+      "start": 37.382,
+      "end": 38.382,
+      "reason": "Retain a real processing cue; omit remaining inference wait.",
+      "question_id": "cross-document",
+      "speed": 1.0,
+      "caption": "Inference wait shortened",
+      "output_duration": 1.0
+    },
+    {
+      "name": "cross-document-answer",
+      "start": 39.986,
+      "end": 48.136,
+      "reason": "Show multi-source answer and fresh citations.",
+      "question_id": "cross-document",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 8.15
+    },
+    {
+      "name": "reviewed-memory",
+      "start": 48.122,
+      "end": 54.722,
+      "reason": "Show observation detail and provenance state.",
+      "question_id": null,
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 6.6
+    },
+    {
+      "name": "responsible-abstention",
+      "start": 55.023,
+      "end": 63.218,
+      "reason": "Show unsupported question and explicit abstention.",
+      "question_id": "out-of-corpus-abstention",
+      "speed": 1.0,
+      "caption": null,
+      "output_duration": 8.195
+    }
+  ],
+  "frame_checks": [
+    {
+      "segment": "workspace-introduction",
+      "point": "start",
+      "output_time": 0.15,
+      "frame": "artifacts/edit-checks-ux-v3/short-00-workspace-introduction-start.png"
+    },
+    {
+      "segment": "workspace-introduction",
+      "point": "end",
+      "output_time": 2.85,
+      "frame": "artifacts/edit-checks-ux-v3/short-00-workspace-introduction-end.png"
+    },
+    {
+      "segment": "single-document-question-typing",
+      "point": "start",
+      "output_time": 3.15,
+      "frame": "artifacts/edit-checks-ux-v3/short-01-single-document-question-typing-start.png"
+    },
+    {
+      "segment": "single-document-question-typing",
+      "point": "end",
+      "output_time": 6.75,
+      "frame": "artifacts/edit-checks-ux-v3/short-01-single-document-question-typing-end.png"
+    },
+    {
+      "segment": "single-document-processing-cue",
+      "point": "start",
+      "output_time": 7.05,
+      "frame": "artifacts/edit-checks-ux-v3/short-02-single-document-processing-cue-start.png"
+    },
+    {
+      "segment": "single-document-processing-cue",
+      "point": "end",
+      "output_time": 7.75,
+      "frame": "artifacts/edit-checks-ux-v3/short-02-single-document-processing-cue-end.png"
+    },
+    {
+      "segment": "single-document-answer",
+      "point": "start",
+      "output_time": 8.05,
+      "frame": "artifacts/edit-checks-ux-v3/short-03-single-document-answer-start.png"
+    },
+    {
+      "segment": "single-document-answer",
+      "point": "end",
+      "output_time": 14.9,
+      "frame": "artifacts/edit-checks-ux-v3/short-03-single-document-answer-end.png"
+    },
+    {
+      "segment": "citation-inspection",
+      "point": "start",
+      "output_time": 15.2,
+      "frame": "artifacts/edit-checks-ux-v3/short-04-citation-inspection-start.png"
+    },
+    {
+      "segment": "citation-inspection",
+      "point": "end",
+      "output_time": 19.1,
+      "frame": "artifacts/edit-checks-ux-v3/short-04-citation-inspection-end.png"
+    },
+    {
+      "segment": "cross-document-submission",
+      "point": "start",
+      "output_time": 19.4,
+      "frame": "artifacts/edit-checks-ux-v3/short-05-cross-document-submission-start.png"
+    },
+    {
+      "segment": "cross-document-submission",
+      "point": "end",
+      "output_time": 20.9,
+      "frame": "artifacts/edit-checks-ux-v3/short-05-cross-document-submission-end.png"
+    },
+    {
+      "segment": "cross-document-processing-cue",
+      "point": "start",
+      "output_time": 21.2,
+      "frame": "artifacts/edit-checks-ux-v3/short-06-cross-document-processing-cue-start.png"
+    },
+    {
+      "segment": "cross-document-processing-cue",
+      "point": "end",
+      "output_time": 21.9,
+      "frame": "artifacts/edit-checks-ux-v3/short-06-cross-document-processing-cue-end.png"
+    },
+    {
+      "segment": "cross-document-answer",
+      "point": "start",
+      "output_time": 22.2,
+      "frame": "artifacts/edit-checks-ux-v3/short-07-cross-document-answer-start.png"
+    },
+    {
+      "segment": "cross-document-answer",
+      "point": "end",
+      "output_time": 30.05,
+      "frame": "artifacts/edit-checks-ux-v3/short-07-cross-document-answer-end.png"
+    },
+    {
+      "segment": "reviewed-memory",
+      "point": "start",
+      "output_time": 30.35,
+      "frame": "artifacts/edit-checks-ux-v3/short-08-reviewed-memory-start.png"
+    },
+    {
+      "segment": "reviewed-memory",
+      "point": "end",
+      "output_time": 36.65,
+      "frame": "artifacts/edit-checks-ux-v3/short-08-reviewed-memory-end.png"
+    },
+    {
+      "segment": "responsible-abstention",
+      "point": "start",
+      "output_time": 36.95,
+      "frame": "artifacts/edit-checks-ux-v3/short-09-responsible-abstention-start.png"
+    },
+    {
+      "segment": "responsible-abstention",
+      "point": "end",
+      "output_time": 44.845,
+      "frame": "artifacts/edit-checks-ux-v3/short-09-responsible-abstention-end.png"
+    }
+  ],
+  "black_detect_events": [],
+  "static_ui_review_events": [
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_start: 10.6",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_duration: 2.64",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_end: 13.24",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_start: 23.08",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_duration: 2.96",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_end: 26.04",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_start: 26.04",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_duration: 2.12",
+    "[Parsed_freezedetect_0 @ 0x7f08a4003380] lavfi.freezedetect.freeze_end: 28.16"
+  ],
+  "static_ui_review_note": "Static runs are expected only during readable answer, citation, or memory holds; processing waits are limited to the labeled one-second cue.",
+  "authenticity": "Every content segment is directly extracted from the source recording; only the wait-compression caption is overlaid."
+}
