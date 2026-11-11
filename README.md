@@ -17,6 +17,18 @@ archived artifact. See the [event timeline](artifacts/research-engine-demo-ux-v2
 and [edit log](artifacts/research-engine-demo-ux-v3-short-edits.json) for recorded
 request and rendering checks.
 
+## The research workflow
+
+The workspace is designed around one visible, evidence-first loop:
+
+1. **Choose a collection** — select one or more permitted PDFs in the Document Library.
+2. **Ask a research question** — return to the Workspace and submit the question against that selection.
+3. **Retrieve page-aware evidence** — the local API searches only the selected documents and prepares traceable passages.
+4. **Read a cited answer** — local Qwen receives the retrieved evidence; the interface shows answer markers, source titles, pages, and publisher links.
+5. **Review, do not blindly reuse** — a cited finding may be saved as a candidate observation. A reviewed observation remains advisory; every later answer must still include fresh evidence.
+
+If the selected collection does not support the question, the application returns an insufficient-evidence response instead of filling the gap with a plausible claim.
+
 ## Key capabilities
 
 - Ingest permitted text-based PDFs into a local document collection.
@@ -71,9 +83,13 @@ runtime directory.
 
 ## Evidence and review interface
 
-| Supporting evidence | Reviewed research memory |
+| Completed cross-document answer | Supporting evidence |
 | --- | --- |
-| ![Expanded evidence panel with page number and publisher PDF link](docs/images/citation-evidence.png) | ![Reviewed-memory ledger and observation detail view](docs/images/reviewed-memory.png) |
+| ![Light Research Workspace showing a completed cross-document answer with evidence markers](docs/images/cited-answer-light.png) | ![Expanded light evidence panel with page number and publisher PDF link](docs/images/citation-evidence-light.png) |
+
+### Reviewable research memory
+
+![Light reviewed-observation ledger and detail view, including status, provenance, and immutable history](docs/images/reviewed-memory-light.png)
 
 ## Technology stack
 
